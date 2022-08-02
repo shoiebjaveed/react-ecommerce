@@ -1,0 +1,28 @@
+:root{
+  --orange:#ff7800;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.product h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.image {
+  max-width:900px;
+  margin:0 auto;
+  padding:20px 30px;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: var(--orange);
+  font-size: 1.25rem;
+}
