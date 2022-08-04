@@ -10,7 +10,7 @@ const Header = props => {
             <nav className={classes.navbar}>
             <Link to='/'>Home</Link>
             <Link to='/'>Store</Link>
-            <Link to='/'>About</Link>
+            <Link to='/about'>About</Link>
             <HeaderCartButton onClick={props.onShowCart} />
             </nav>
         </header>

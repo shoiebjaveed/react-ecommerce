@@ -1,6 +1,7 @@
 
 const data = [
     {
+        id: 1,
 
         title: 'Colors',
         
@@ -11,6 +12,7 @@ const data = [
         },
         
         {
+        id: 2,
         
         title: 'Black and white Colors',
         
@@ -21,6 +23,7 @@ const data = [
         },
         
         {
+        id: 3,
         
         title: 'Yellow and Black Colors',
         
@@ -31,6 +34,7 @@ const data = [
         },
         
         {
+        id: 4,
         
         title: 'Blue Color',
         

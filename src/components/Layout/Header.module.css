@@ -73,10 +73,16 @@ body{
 
 .title {
   display:flex;
-    padding:50px;
+    padding:70px;
     color: var(--orange);
     justify-content: center;
     background: rgba(0, 0, 0, 0.815);
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 60px;
+    color: var(--orange);
 }
 
 .cartBtn{

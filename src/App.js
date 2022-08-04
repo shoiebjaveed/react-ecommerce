@@ -5,6 +5,7 @@ import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Products from "./components/Products/Products";
 import store from "./components/UI/store/store";
+import About from "./pages/About";
 
 function App() {
   const [showCart, setCart] = useState(false)
@@ -25,6 +26,7 @@ function App() {
       <Header onShowCart={showCartHandler} />
       <Routes>
         <Route path="/" element={<Products />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
     </BrowserRouter>
     </Provider>

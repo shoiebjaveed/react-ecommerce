@@ -29,6 +29,8 @@ const Products =  ()=> {
         dispatch(add(product))
     }
 
+    
+
     return <div className="productWrapper">
         {
         products.map(product => (

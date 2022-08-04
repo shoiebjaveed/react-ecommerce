@@ -14,6 +14,8 @@ const Cart = props => {
     }
 
 
+
+
     const cartItems = <ul className={classes['cart-items']}>
         {products.map(item => <li>
             {<div className={classes.image}><img className={classes['cart-img']} src={item.imageUrl} alt="item" /></div>}
