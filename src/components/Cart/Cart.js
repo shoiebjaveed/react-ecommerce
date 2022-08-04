@@ -1,32 +1,23 @@
 import Modal from '../UI/Modal';
 import classes from './Cart.module.css';
-
-const dummyItems = [
-    {
-    title: 'Colors',
-    price: 100,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-    quantity: 2,
-    },
-    {
-    title: 'Black and white Colors',
-    price: 50,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-    quantity: 3,
-    },
-    {
-    title: 'Yellow and Black Colors',
-    price: 70,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
-    quantity: 1,
-    }
-    ]
+import { useSelector, useDispatch } from 'react-redux';
+import { remove } from '../UI/store/cartSlice';
 
 const Cart = props => {
+
+    const dispatch = useDispatch()
+
+    const products = useSelector(state => state.cart)
+
+    const handleRemove = (productID) => {
+        dispatch(remove(productID))
+    }
+
+
     const cartItems = <ul className={classes['cart-items']}>
-        {dummyItems.map(item => <li>
-            {<div className={classes.image}><img src={item.imageUrl} alt="item" /></div>}
-            {item.title} | {item.quantity} | {item.price}</li>)}</ul>
+        {products.map(item => <li>
+            {<div className={classes.image}><img className={classes['cart-img']} src={item.imageUrl} alt="item" /></div>}
+            {item.title} | {item.quantity} | {item.price} <button onClick={()=>handleRemove(item.id)}>remove</button></li>)}</ul>
 
 
     return(

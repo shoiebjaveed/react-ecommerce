@@ -1,0 +1,26 @@
+:root{
+    --orange:#ff7800;
+}
+
+.product-img {
+    height: 180px;
+}
+
+button {
+  bottom: 0;
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+button:hover{
+    background-color: #641e03;
+    border-color: #641e03;
+}
+
+

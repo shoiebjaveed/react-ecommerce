@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 
@@ -7,9 +8,9 @@ const Header = props => {
     return <Fragment>
         <header className={classes.header}>
             <nav className={classes.navbar}>
-            <a href='#home'>Home</a>
-            <a href='#store'>Store</a>
-            <a href='#about'>About</a>
+            <Link to='/'>Home</Link>
+            <Link to='/'>Store</Link>
+            <Link to='/'>About</Link>
             <HeaderCartButton onClick={props.onShowCart} />
             </nav>
         </header>

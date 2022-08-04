@@ -15,6 +15,10 @@
   margin: 1rem 0;
 }
 
+.cart-img{
+  height: 100px;
+}
+
 
 .actions {
   text-align: right;
@@ -44,4 +48,9 @@
 .actions .button {
   background-color: #8a2b06;
   color: white;
+}
+
+li {
+  text-align: center;
+  text-shadow: #8a2b06;
 }
