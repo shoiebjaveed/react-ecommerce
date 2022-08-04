@@ -1,0 +1,56 @@
+:root{
+    --orange:#ff7800;
+}
+.home img {
+    width: 100%;
+    height: 25rem;
+    z-index: 0;
+    overflow: hidden;
+}
+.play-btn{
+    align-items: center;
+    cursor: pointer;
+    display:block;
+    border:2px solid var(--orange);
+    border-radius:50%;
+    padding:20px;
+    font-size:30px;
+    font-weight: 200;
+    margin:20px auto;
+    background: inherit;
+    color: var(--orange);
+}
+
+.play-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+ .tour-item{
+    display:flex;
+    border-bottom:1px solid black;
+    padding:10px;
+    align-items: center;
+    justify-content: space-between;
+}
+ .tour-item .tour-date{
+    width:12%;
+}
+.tour-item .tour-place{
+    width:25%;
+    color:#777;
+}
+.tour-item .tour-spec-place{
+    width:53%;
+    color:#777;
+}
+.tour-item .buy-btn{
+    width:20%;
+    background: #56CCF2;
+    color:white;
+    border:none;
+    padding:7px;
+    border-radius:5px;
+    font-weight:700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

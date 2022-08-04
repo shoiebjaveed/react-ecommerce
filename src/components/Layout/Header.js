@@ -8,7 +8,7 @@ const Header = props => {
     return <Fragment>
         <header className={classes.header}>
             <nav className={classes.navbar}>
-            <Link to='/'>Home</Link>
+            <Link to='/home'>Home</Link>
             <Link to='/'>Store</Link>
             <Link to='/about'>About</Link>
             <HeaderCartButton onClick={props.onShowCart} />
