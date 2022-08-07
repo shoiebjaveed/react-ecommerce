@@ -11,6 +11,7 @@ const Header = props => {
             <Link to='/home'>Home</Link>
             <Link to='/'>Store</Link>
             <Link to='/about'>About</Link>
+            <Link to='/contact'>contact</Link>
             <HeaderCartButton onClick={props.onShowCart} />
             </nav>
         </header>

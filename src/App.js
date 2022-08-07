@@ -7,6 +7,7 @@ import Products from "./components/Products/Products";
 import store from "./components/UI/store/store";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
   const [showCart, setCart] = useState(false)
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Products />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/home" element={<Home />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
     </Provider>
