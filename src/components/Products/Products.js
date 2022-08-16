@@ -4,6 +4,7 @@ import { add } from '../UI/store/cartSlice'
 import classes from './Products.module.css';
 import Card from '../UI/Card'
 import data from "./dummydata";
+import { Link } from 'react-router-dom';
 
 
 const Products =  ()=> {
@@ -34,9 +35,9 @@ const Products =  ()=> {
     return <div className="productWrapper">
         {
         products.map(product => (
-            <div className='card'>
+            <div key={product.id} className='card'>
                 <Card>
-                <div key={product.id}>
+                <div >
                     <img className={classes['product-img']} src={product.imageUrl} alt='img' />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
@@ -44,7 +45,7 @@ const Products =  ()=> {
                           dolore eu fugiat nulla pariatur. Excepteur 
                         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <h4>{product.title}</h4> 
+                    <Link to={`/product-detail/${product.title}`}><h4>{product.title}</h4></Link> 
                     <h5>{`$${product.price}`}</h5>
                     <button classes={classes['add-btn']} onClick={()=> handleAdd(product)}>Add to cart</button>
                 </div>

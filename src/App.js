@@ -8,6 +8,8 @@ import store from "./components/UI/store/store";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import ProductDetail from "./components/Products/ProductDetail";
+import Login from "./pages/Login";
 
 function App() {
   const [showCart, setCart] = useState(false)
@@ -27,10 +29,12 @@ function App() {
       {showCart && <Cart onClose={hideCartHandler}/>}
       <Header onShowCart={showCartHandler} />
       <Routes>
+        <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<Products />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/product-detail/:productID" element={<ProductDetail />}></Route>
       </Routes>
     </BrowserRouter>
     </Provider>

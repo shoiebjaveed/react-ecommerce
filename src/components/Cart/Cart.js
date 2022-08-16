@@ -17,7 +17,7 @@ const Cart = props => {
 
 
     const cartItems = <ul className={classes['cart-items']}>
-        {products.map(item => <li>
+        {products.map(item => <li key={item.id}>
             {<div className={classes.image}><img className={classes['cart-img']} src={item.imageUrl} alt="item" /></div>}
             {item.title} | {item.quantity} | {item.price} <button onClick={()=>handleRemove(item.id)}>remove</button></li>)}</ul>
 
