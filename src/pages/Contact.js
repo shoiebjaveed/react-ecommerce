@@ -24,6 +24,7 @@ const submitFormHandler = async (e) => {
     })
     const data = await res.json();
     console.log(data)
+    alert('Thank you for contacting us..')
     
   }
 
