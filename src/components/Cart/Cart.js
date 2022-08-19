@@ -2,22 +2,31 @@ import Modal from '../UI/Modal';
 import classes from './Cart.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { remove } from '../UI/store/cartSlice';
+import { fetchProducts } from '../UI/store/cartProducts';
+import { useEffect } from 'react';
+
 
 const Cart = props => {
 
     const dispatch = useDispatch()
 
-    const products = useSelector(state => state.cart)
+    const products = useSelector(state => state.product)
+    
+    
 
     const handleRemove = (productID) => {
         dispatch(remove(productID))
     }
 
+    useEffect(() => {
+        dispatch(fetchProducts())
+    }, [])
+
 
 
 
     const cartItems = <ul className={classes['cart-items']}>
-        {products.map(item => <li key={item.id}>
+        {products.data.map(item => <li key={item._id}>
             {<div className={classes.image}><img className={classes['cart-img']} src={item.imageUrl} alt="item" /></div>}
             {item.title} | {item.quantity} | {item.price} <button onClick={()=>handleRemove(item.id)}>remove</button></li>)}</ul>
 

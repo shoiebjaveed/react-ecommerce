@@ -5,6 +5,8 @@ import classes from './Products.module.css';
 import Card from '../UI/Card'
 import data from "./dummydata";
 import { Link } from 'react-router-dom';
+import axios from "axios";
+
 
 
 const Products =  ()=> {
@@ -26,8 +28,10 @@ const Products =  ()=> {
         fetchProducts();
     }, [])
 
-    const handleAdd = product => {
-        dispatch(add(product))
+    const handleAdd = async (product) => {
+        dispatch(add(product), 
+        axios.post(`https://crudcrud.com/api/7c91f9ec64564769a14f4e3363c5a969/cartAdmin`, product)
+            )
     }
 
     

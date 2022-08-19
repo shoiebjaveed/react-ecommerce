@@ -28,7 +28,7 @@ const Login = () => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(res => {
+        }).then((res) => {
             if(res.ok){
                 console.log('sucess..');
                 return res.json();
@@ -36,6 +36,7 @@ const Login = () => {
                 alert('Incorrect Password')
             }
         }).then((data) => {
+            console.log(data)
             authCtx.login(data.idToken);
             history('/store');
         }).catch((err) => alert(err.message))

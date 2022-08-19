@@ -38,7 +38,7 @@ function App() {
         {authCtx.isLoggedIn && (<Route path="/store" element={<Products />}></Route>)}
         <Route path="/home" element={<Home />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/product-detail/:productID" element={<ProductDetail />}></Route>
+        {authCtx.isLoggedIn && (<Route path="/product-detail/:productID" element={<ProductDetail />}></Route>)}
         <Route path="*" element={<Navigate to ="/login" />}/>
       </Routes>
     </BrowserRouter>
